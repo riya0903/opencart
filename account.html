@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products OPENCART</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans&family=Mouse+Memoirs&family=Poppins:ital,wght@0,200;0,300;0,600;1,500;1,600;1,700&family=Roboto+Slab:wght@600&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="Opencart_img\My project-1 (1).png" width="160px">
+            </div>
+            <nav>
+                <ul id="menuitems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a> </li>
+                    <li><a href="contact.html">Contact</a> </li>
+                    <li><a href="account.html">Account</a> </li>
+
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+    <!-- Account page -->
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="Opencart_img/image1.png">
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="Indicator">
+                        </div>
+                        <form action="my.php" id="LoginForm" method="post">
+                            <input type="text" placeholder="Username">
+                            <input type="password" placeholder="password">
+                            <button type="submit" class="btn">Login</button>
+                            <a href="">Forget password</a>
+                        </form>
+
+                        <form action="my.php" id="RegForm" method="post">
+                            <input type="text" placeholder="Username">
+                            <input type="email" placeholder="email">
+                            <input type="password" placeholder="password">
+                            <button type="submit" class="btn">Register</button>
+
+                        </form>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!------footer--------->
+   <div class="footer">
+    <div class="container" data-aos="fade-up">
+      <div class="row">
+        <div class="footer-col-1">
+          <h3> Download Our App </h3>
+          <p>Download App for Android and ios mobile phone</p>
+          <div class="app-logo">
+            <a href="https://play.google.com/">  <img src="Opencart_img\play-store.png" class="footer-img"/></a>
+            <a href="https://www.apple.com/in/app-store/"> <img src="Opencart_img\app-store.png" class="footer-img"/></a>
+          </div>
+        </div>
+        <div class="footer-col-2">
+          <a href="#"><img src="Opencart_img\My project-1.png" /></a>
+          <p>
+            Our Purpose is-to sustainably make the pleasure and benefits of
+            Sports Accessible to many!
+          </p>
+        </div>
+        <div class="footer-col-3">
+          <h3>Useful Links</h3>
+          <ul>
+            <li><a href="#" class="useful-links"> Coupons </a></li>
+            <li><a href="#" class="useful-links"> Blog Post </a></li>
+            <li><a href="#" class="useful-links"> Return Policy</a></li>
+            <li><a href="#" class="useful-links"> Join Affiliate </a></li>
+          </ul>
+        </div>
+        <div class="footer-col-4">
+          <h3>Follow Us</h3>
+          <div class="socialbtns-wrapper">
+            <div class="socialbtns">
+              <ul>
+                <li>
+                  <a href="#" class="fa fa-facebook center"></a
+                  ><span>Facebook</span>
+                </li>
+                <br />
+                <li>
+                  <a href="#" class="fa fa-twitter center"></a
+                  ><span>Twitter</span>
+                </li>
+                <br />
+                <li>
+                  <a href="#" class="fa fa-instagram center"></a
+                  ><span>Instagram</span>
+                </li>
+                <br />
+                <li>
+                  <a href="#" class="fa fa-youtube center"></a
+                  ><span>Youtube</span>
+                </li>
+                <br />
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <p >
+        <a href="#"> Copyright &copy </a>
+        <script type="text/javascript">
+          document.write(new Date().getFullYear())
+        </script>
+        -OPENCART
+      </p>
+    </div>
+  </div>
+</div>
+    <!-- js -->
+    <script>
+        var MenuItems = document.getElementById("menuitems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+    <!-- js for the Toggle form -->
+    <script>
+        var LoginForm = document.getElementById("LoginForm");
+        var RegForm = document.getElementById("RegForm");
+        var Indicator = document.getElementById("Indicator");
+
+        function register() {
+            RegForm.style.transform = "translateX(0px)";
+            LoginForm.style.transform = "translateX(0px)";
+            Indicator.style.transform = "translateX(100px)";
+
+        }
+
+        function login() {
+            RegForm.style.transform = "translateX(300px)";
+            LoginForm.style.transform = "translateX(300px)";
+            Indicator.style.transform = "translateX(0px)";
+
+        }
+    </script>
+
+</body>
+
+</html>
